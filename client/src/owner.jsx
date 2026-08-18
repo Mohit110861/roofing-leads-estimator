@@ -298,7 +298,7 @@ function Owner() {
 
     try {
       const response = await fetch(
-        'http://localhost:5000/api/auth/login',
+        'https://roofing-leads-estimator.onrender.com/api/auth/login',
         {
           method: 'POST',
           headers: {
@@ -339,7 +339,7 @@ function Owner() {
 
     try {
       const response = await fetch(
-        'http://localhost:5000/api/leads',
+        'https://roofing-leads-estimator.onrender.com/api/leads',
         {
           headers: {
             Authorization: `Bearer ${savedToken}`,
@@ -385,7 +385,7 @@ function Owner() {
 
     try {
       const response = await fetch(
-        `http://localhost:5000/api/leads/${leadId}`,
+        `ttps://roofing-leads-estimator.onrender.com/api/leads/${leadId}`,
         {
           headers: {
             Authorization: 'Bearer ' + savedToken,
@@ -429,7 +429,7 @@ function Owner() {
 
     try {
       const response = await fetch(
-        `http://localhost:5000/api/leads/${selectedLead._id}/status`,
+        `https://roofing-leads-estimator.onrender.com/api/leads/${selectedLead._id}/status`,
         {
           method: 'PATCH',
           headers: {
@@ -485,7 +485,7 @@ function Owner() {
 
     try {
       const response = await fetch(
-        `http://localhost:5000/api/leads/${selectedLead._id}/notes`,
+        `https://roofing-leads-estimator.onrender.com/api/leads/${selectedLead._id}/notes`,
         {
           method: 'PATCH',
           headers: {
@@ -539,7 +539,7 @@ function Owner() {
     setConfigError('')
 
     try {
-      const response = await fetch('http://localhost:5000/api/config/full', {
+      const response = await fetch('https://roofing-leads-estimator.onrender.com/api/config/full', {
         headers: { Authorization: `Bearer ${savedToken}` },
       })
 
@@ -571,7 +571,7 @@ function Owner() {
     setConfigMessage('')
 
     try {
-      const response = await fetch('http://localhost:5000/api/config', {
+      const response = await fetch('https://roofing-leads-estimator.onrender.com/api/config', {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
