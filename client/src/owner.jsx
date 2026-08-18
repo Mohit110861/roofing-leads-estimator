@@ -385,7 +385,7 @@ function Owner() {
 
     try {
       const response = await fetch(
-        `ttps://roofing-leads-estimator.onrender.com/api/leads/${leadId}`,
+        `https://roofing-leads-estimator.onrender.com/api/leads/${leadId}`,
         {
           headers: {
             Authorization: 'Bearer ' + savedToken,
