@@ -1,9 +1,6 @@
 import { useEffect, useState } from 'react'
 
-// Which numeric field on an option actually feeds the calculator depends
-// on the question's key. New custom questions fall back to a generic
-// `value` field that isn't wired into pricing yet (see the hint shown in
-// the form) until a developer adds a matching branch server-side.
+
 const KNOWN_PRICING_FIELDS = {
   material: { key: 'rate', label: 'Rate ($ per unit)' },
   pitch: { key: 'multiplier', label: 'Multiplier' },
@@ -636,9 +633,7 @@ function Owner() {
     saveConfig(nextQuestions, 'Question order updated.')
   }
 
-  // Add or Edit: never deletes. A brand-new question is appended and
-  // defaulted to active with the next order slot; an edited question keeps
-  // its key, active state, and order, and only the submitted fields change.
+ 
   function upsertQuestion(questionData) {
     if (!config) return
 
