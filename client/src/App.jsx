@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import './App.css'
-import Owner from './Owner'
+import Owner from "./owner";
 
 function PublicEstimator() {
   const [config, setConfig] = useState(null)
